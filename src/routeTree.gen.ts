@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProduceRouteImport } from './routes/produce'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FisheriesRouteImport } from './routes/fisheries'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -17,6 +18,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const ProduceRoute = ProduceRouteImport.update({
   id: '/produce',
   path: '/produce',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FisheriesRoute = FisheriesRouteImport.update({
@@ -39,12 +45,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/fisheries': typeof FisheriesRoute
+  '/gallery': typeof GalleryRoute
   '/produce': typeof ProduceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/fisheries': typeof FisheriesRoute
+  '/gallery': typeof GalleryRoute
   '/produce': typeof ProduceRoute
 }
 export interface FileRoutesById {
@@ -52,20 +60,22 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/fisheries': typeof FisheriesRoute
+  '/gallery': typeof GalleryRoute
   '/produce': typeof ProduceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/fisheries' | '/produce'
+  fullPaths: '/' | '/about' | '/fisheries' | '/gallery' | '/produce'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/fisheries' | '/produce'
-  id: '__root__' | '/' | '/about' | '/fisheries' | '/produce'
+  to: '/' | '/about' | '/fisheries' | '/gallery' | '/produce'
+  id: '__root__' | '/' | '/about' | '/fisheries' | '/gallery' | '/produce'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   FisheriesRoute: typeof FisheriesRoute
+  GalleryRoute: typeof GalleryRoute
   ProduceRoute: typeof ProduceRoute
 }
 
@@ -76,6 +86,13 @@ declare module '@tanstack/react-router' {
       path: '/produce'
       fullPath: '/produce'
       preLoaderRoute: typeof ProduceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/fisheries': {
@@ -106,6 +123,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   FisheriesRoute: FisheriesRoute,
+  GalleryRoute: GalleryRoute,
   ProduceRoute: ProduceRoute,
 }
 export const routeTree = rootRouteImport
