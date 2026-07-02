@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ProduceRouteImport } from './routes/produce'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as FisheriesRouteImport } from './routes/fisheries'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -30,6 +31,11 @@ const FisheriesRoute = FisheriesRouteImport.update({
   path: '/fisheries',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -44,6 +50,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/fisheries': typeof FisheriesRoute
   '/gallery': typeof GalleryRoute
   '/produce': typeof ProduceRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/fisheries': typeof FisheriesRoute
   '/gallery': typeof GalleryRoute
   '/produce': typeof ProduceRoute
@@ -59,21 +67,36 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/fisheries': typeof FisheriesRoute
   '/gallery': typeof GalleryRoute
   '/produce': typeof ProduceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/fisheries' | '/gallery' | '/produce'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/fisheries'
+    | '/gallery'
+    | '/produce'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/fisheries' | '/gallery' | '/produce'
-  id: '__root__' | '/' | '/about' | '/fisheries' | '/gallery' | '/produce'
+  to: '/' | '/about' | '/contact' | '/fisheries' | '/gallery' | '/produce'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/fisheries'
+    | '/gallery'
+    | '/produce'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
   FisheriesRoute: typeof FisheriesRoute
   GalleryRoute: typeof GalleryRoute
   ProduceRoute: typeof ProduceRoute
@@ -102,6 +125,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FisheriesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -122,6 +152,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
   FisheriesRoute: FisheriesRoute,
   GalleryRoute: GalleryRoute,
   ProduceRoute: ProduceRoute,
