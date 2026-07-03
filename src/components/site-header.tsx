@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoAsset from "@/assets/rvs-agri-logo.png.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -16,13 +17,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 md:px-8">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-primary text-primary-foreground shadow-soft">
-            <Leaf className="h-5 w-5" />
-          </span>
-          <span className="text-xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>
-            Vaeli <span className="text-primary">Farms</span>
-          </span>
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)} aria-label="RVS Agri — Growing the Future">
+          <img src={logoAsset.url} alt="RVS Agri" className="h-10 w-auto md:h-12" />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">

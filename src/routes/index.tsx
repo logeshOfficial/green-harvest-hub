@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ArrowRight, Leaf, Sprout, Fish, TreePine } from "lucide-react";
 import heroPaddy from "@/assets/hero-paddy.jpg";
+import paddyVideo from "@/assets/paddy-hero.mp4.asset.json";
 import paddy from "@/assets/paddy.jpg";
 import coconut from "@/assets/coconut.jpg";
 import areca from "@/assets/areca.jpg";
@@ -42,11 +43,13 @@ function Index() {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <img
-          src={heroPaddy}
-          alt="Aerial view of Vaeli Farms paddy fields"
-          width={1920}
-          height={1080}
+        <video
+          src={paddyVideo.url}
+          poster={heroPaddy}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-hero" />
