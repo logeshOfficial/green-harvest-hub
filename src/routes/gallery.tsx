@@ -14,10 +14,10 @@ import hero from "@/assets/hero-paddy.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Vaeli Farms" },
+      { title: "Gallery — RVS Agri" },
       { name: "description", content: "A visual portfolio of farm life, harvests and growth stages across the estate." },
-      { property: "og:title", content: "Gallery — Vaeli Farms" },
-      { property: "og:description", content: "Photographs from across the year at Vaeli Farms." },
+      { property: "og:title", content: "Gallery — RVS Agri" },
+      { property: "og:description", content: "Photographs from across the year at RVS Agri." },
     ],
   }),
   component: Gallery,

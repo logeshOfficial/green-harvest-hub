@@ -9,9 +9,9 @@ import semmaram from "@/assets/semmaram.jpg";
 export const Route = createFileRoute("/produce")({
   head: () => ({
     meta: [
-      { title: "Our Produce — Vaeli Farms" },
+      { title: "Our Produce — RVS Agri" },
       { name: "description", content: "Paddy, coconut, areca nut, mango, jackfruit and teak grown across 120+ acres of the Cauvery delta." },
-      { property: "og:title", content: "Our Produce — Vaeli Farms" },
+      { property: "og:title", content: "Our Produce — RVS Agri" },
       { property: "og:description", content: "Agriculture, areca, horticulture and forestry from a fourth-generation family estate." },
     ],
   }),

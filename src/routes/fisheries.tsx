@@ -5,10 +5,10 @@ import { Droplets, Fish, Waves, Leaf } from "lucide-react";
 export const Route = createFileRoute("/fisheries")({
   head: () => ({
     meta: [
-      { title: "Fisheries — Vaeli Farms" },
+      { title: "Fisheries — RVS Agri" },
       { name: "description", content: "Rain-fed freshwater fish ponds with rohu, catla, mrigal and tilapia. Sustainable water management on the estate." },
-      { property: "og:title", content: "Fisheries — Vaeli Farms" },
-      { property: "og:description", content: "Freshwater aquaculture ponds and species available from Vaeli Farms." },
+      { property: "og:title", content: "Fisheries — RVS Agri" },
+      { property: "og:description", content: "Freshwater aquaculture ponds and species available from RVS Agri." },
     ],
   }),
   component: Fisheries,
@@ -25,7 +25,7 @@ function Fisheries() {
   return (
     <div>
       <section className="relative overflow-hidden">
-        <img src={fishpond} alt="Vaeli Farms fish ponds" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={fishpond} alt="RVS Agri fish ponds" className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="relative mx-auto max-w-7xl px-5 py-28 text-primary-foreground md:px-8 md:py-40">
           <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--primary-glow)]">Fisheries</span>

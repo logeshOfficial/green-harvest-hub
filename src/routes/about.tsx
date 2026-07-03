@@ -4,9 +4,9 @@ import about from "@/assets/about.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Vaeli Farms" },
+      { title: "About — RVS Agri" },
       { name: "description", content: "Four generations of farming in the Cauvery delta. Our heritage, mission and relationship with the land." },
-      { property: "og:title", content: "About Vaeli Farms" },
+      { property: "og:title", content: "About RVS Agri" },
       { property: "og:description", content: "A family estate rooted in Tamil Nadu since 1912." },
     ],
   }),
@@ -29,7 +29,7 @@ function About() {
           <span className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Our story</span>
           <h1 className="mt-3 text-5xl md:text-6xl">Four generations, one river, one land.</h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            Vaeli Farms began in 1912 with a single paddy plot on the banks of the Cauvery. A century later, our children walk the same bunds — now managing 120+ acres of agriculture, horticulture, forestry and fisheries.
+            RVS Agri began in 1912 with a single paddy plot on the banks of the Cauvery. A century later, our children walk the same bunds — now managing 120+ acres of agriculture, horticulture, forestry and fisheries.
           </p>
           <p className="mt-4 text-muted-foreground">
             We believe farming is a long conversation with the soil. We compost what the land gives us, plant what the seasons ask for, and never take more than the water table can replace.
