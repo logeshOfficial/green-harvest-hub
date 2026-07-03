@@ -18,7 +18,7 @@ const milestones = [
   { year: "1958", title: "The coconut grove", body: "The estate expanded with tall coconut palms and areca inter-cropping." },
   { year: "1994", title: "Orchards", body: "Mango and jackfruit orchards planted — the first harvest three years later." },
   { year: "2011", title: "Freshwater ponds", body: "Six acres converted into interconnected, rain-fed fish ponds." },
-  { year: "2023", title: "Modern methods", body: "Drip irrigation, soil analytics and solar aerators without losing craft." },
+  { year: "2023", title: "Tradition methods", body: "Drip irrigation, soil analytics and solar aerators without losing craft." },
 ];
 
 function About() {

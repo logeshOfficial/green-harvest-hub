@@ -79,10 +79,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vaeli Farms — Modern Agriculture from the Cauvery Delta" },
+      { title: "Vaeli Farms — Tradition Agriculture from the Cauvery Delta" },
       { name: "description", content: "Family-run agriculture estate growing paddy, coconut, areca, mango, jackfruit, teak and freshwater fish. Bulk buyer enquiries welcome." },
       { name: "author", content: "Vaeli Farms" },
-      { property: "og:title", content: "Vaeli Farms — Modern Agriculture from the Cauvery Delta" },
+      { property: "og:title", content: "Vaeli Farms — Tradition Agriculture from the Cauvery Delta" },
       { property: "og:description", content: "Four generations of paddy, coconut, areca, mango, jackfruit, teak and freshwater fisheries." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -55,7 +55,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-hero" />
         <div className="relative mx-auto flex max-w-7xl flex-col justify-end px-5 pb-16 pt-32 text-primary-foreground md:px-8 md:pb-24 md:pt-48">
           <span className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] backdrop-blur">
-            <Sprout className="h-3.5 w-3.5" /> Modern Agriculture Solutions
+            <Sprout className="h-3.5 w-3.5" /> Tradition Agriculture Solutions
           </span>
           <h1 className="max-w-4xl text-5xl leading-[0.95] md:text-7xl lg:text-8xl">
             Rooted in soil.<br />
